@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+        *{  margin: 0;
+            padding: 0;
+            background-color: #000000;
+            list-style: none;
+            text-decoration: none;}
+        header {
+            height: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        nav {
+            width: 60%;
+        }
+
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-between ;
+        }
+
+        li {
+            list-style: none;
+            color:aliceblue;
+            cursor: pointer;
+            font-size: 20px;
+            transition: .5s;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+        }
+
+        li:hover {
+            color: #D21617;
+        }
+
+        #logo {
+            width: 150px;
+            height: auto;
+        }
+
+        #titulo {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            width: 100%;
+            color:aliceblue;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+        }
+
+        #subtitulo {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            color:aliceblue;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+        }
+
+        .campo input[type="text"], .campo input[type="email"], .campo textarea {
+            clear: both;
+            padding: 0.2em;
+            border: 1px solid #ffffff;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin-bottom: 0.2em;
+            color:aliceblue;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+        }
+
+        .but{
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .botao {
+            font-size: 1.2em;
+            background: #ffffff;
+            border: 0;
+            margin-bottom: 1em;
+            color: #000000;
+            padding: 0.2em 0.6em;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+        .botao:hover {
+            background: #ff0000;
+            box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+            text-shadow: none;
+            color:#ffffff
+        }
+
+        /* Elementos de classe botão e de tag <select> */
+        .botao, select{
+            cursor: pointer;
+        }
+
+        .button{
+            width: 200px;
+            height: 60px;
+            margin-top: 300px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            color: #000;
+            border: 2px solid #D21617;
+            border-radius: 6px;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+        }
+
+        .button:hover {
+            background-image: url(https://i1.sndcdn.com/artworks-000120577653-v6pkko-t500x500.jpg);
+            width: 500px;
+            height: 500px;
+            margin-top: 160px;
+            text-decoration-color: none;
+            border: 2px solid #fff;
+            border-radius: 20px;
+            color: rgba(9, 255, 0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="./image-removebg-preview (6).png"/>
+        <nav>
+            <ul>
+                <a href="./proj1.html">
+                    <li>Home</li>
+                </a>
+                <a href="./contato.html">
+                    <li>Contato</li>
+                </a>
+                <a href="./fotos.html">
+                    <li>Fotos</li>
+                </a>
+                <a href="./cadastro.html">
+                    <li>Cadastro</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h1 id="titulo">Cadastro de usuários</h1>
+        <p id="subtitulo">Complete suas informações</p>
+        <br>
+    </div>
+
+    <center>
+        <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+        <div class="campo">
+            <label style="font-family: 'Kdam Thmor Pro', sans-serif;color:aliceblue" for="nome"><strong>Nome</strong></label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+
+        <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+        <div class="campo">
+            <label style="font-family: 'Kdam Thmor Pro', sans-serif;color:aliceblue" for="sobrenome"><strong>Sobrenome</strong></label>
+            <input type="text" name="sobrenome" id="sobrenome" required>
+        </div>
+        
+        <!-- Campo de email com-->
+        <div class="campo">
+            <label style="font-family: 'Kdam Thmor Pro', sans-serif;color:aliceblue" for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <!-- Caixa de texto -->
+        <div class="campo">
+            <br>
+            <label style="font-family: 'Kdam Thmor Pro', sans-serif;color:aliceblue" for="experiencia"><strong>Conte um pouco mais sobre o por que você está utilizando esse meio para compra de ingressos: </strong></label>
+            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit" onsubmit="">Concluído</button>            
+    </center>
+
+    <div class="but">
+        <div class="button">Aperte Aqui</div>
+    </div>
+
+</body>
+</html>
